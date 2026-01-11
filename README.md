@@ -138,15 +138,8 @@ Returns the **top 3 personalized event recommendations**.
 - AI Event Recommendation Engine  
 - AI Chatbot  
 - End-to-end registration workflow
-  
-**Byna Sriroop (23BCE1863)**  
-- Backend serverless architecture 
 - DNA Matching System  
 - Admin Dashboard  
-- S3 & CloudFront setup  
-
-  
-
 ---
 
 ## 🔮 Future Enhancements
