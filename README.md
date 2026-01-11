@@ -132,18 +132,20 @@ Returns the **top 3 personalized event recommendations**.
 
 ## 👨‍💻 Contributors
 
+**Gunnam Reddy Sujith Reddy (23BCE1613)**  
+- Frontend development & deployment  
+- API Gateway & IAM configuration  
+- AI Event Recommendation Engine  
+- AI Chatbot  
+- End-to-end registration workflow
+  
 **Byna Sriroop (23BCE1863)**  
 - Backend serverless architecture 
 - DNA Matching System  
 - Admin Dashboard  
 - S3 & CloudFront setup  
 
-**Gunnam Reddy Sujith Reddy (23BCE1613)**  
-- Frontend development & deployment  
-- API Gateway & IAM configuration  
-- AI Event Recommendation Engine  
-- AI Chatbot  
-- End-to-end registration workflow  
+  
 
 ---
 
