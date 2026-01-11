@@ -1,213 +1,168 @@
-🌐 Serverless Event Registration System
-with AI-Powered Connection Matching
+# Serverless Event Registration System  
+## AI-Powered Connection Matching Platform
 
-A 100% serverless, cloud-native event management platform built on Amazon Web Services (AWS) that goes beyond traditional event registration by integrating AI-driven networking, recommendations, and chatbot support.
+A fully serverless, cloud-native event registration and management system built on **Amazon Web Services (AWS)**.  
+This platform enhances traditional event registration by integrating **AI-based attendee matching, personalized event recommendations, and an NLP-powered chatbot**.
 
-📌 Project Overview
+---
 
-Traditional event platforms suffer from:
+## 📖 Project Overview
 
-High server costs
+Traditional event management platforms suffer from:
+- High infrastructure costs
+- Poor scalability during traffic spikes
+- Limited networking value for attendees
 
-Poor scalability during traffic spikes
+This project solves these issues using a **100% serverless AWS architecture** combined with **custom AI algorithms** to deliver scalability, cost efficiency, and intelligent user engagement.
 
-Lack of meaningful attendee networking
+---
 
-This project solves these issues by implementing a fully serverless AWS architecture combined with custom AI algorithms to enhance user engagement and networking value.
+## 🚀 Key Features
 
-🚀 Key Features
-🔹 Serverless Architecture
+### 🔹 Serverless Architecture
+- No EC2 servers
+- Auto-scaling and pay-as-you-go model
+- Zero idle cost
 
-No EC2 servers
+### 🔹 AI-Powered Features
+- **DNA Matching System** – connects attendees based on skills, goals, interests, and mentorship needs
+- **Hybrid Event Recommendation Engine** – personalized event suggestions
+- **NLP-Based AI Chatbot** – instant, context-aware user support
 
-Auto-scaling, pay-as-you-go model
+### 🔹 Admin Dashboard
+- Real-time analytics
+- Event capacity monitoring
+- Registration trends and user engagement metrics
 
-Zero idle cost
+---
 
-🔹 AI-Powered Features
+## 🏗️ System Architecture
 
-DNA Matching System – connects attendees based on skills, interests, goals, and mentorship needs
+### Frontend
+- React.js
+- Hosted on **Amazon S3**
+- Delivered globally using **Amazon CloudFront**
 
-Hybrid Event Recommendation Engine – personalized event suggestions
+### Backend
+- **Amazon API Gateway** (REST APIs)
+- **AWS Lambda** (Python 3.12)
 
-NLP-based AI Chatbot – instant, context-aware responses
+### Database
+- **Amazon DynamoDB**
+  - Events table
+  - Registrations table
+  - MatchingProfiles table (with GSI on `eventId`)
 
-🔹 Admin Dashboard
+### Monitoring & Logging
+- **Amazon CloudWatch**
 
-Real-time event analytics
+---
 
-User engagement metrics
+## 🧠 AI Modules Explained
 
-Registration trends
-
-🏗️ System Architecture
-
-Frontend
-
-React.js
-
-Hosted on Amazon S3
-
-Globally delivered via Amazon CloudFront
-
-Backend
-
-Amazon API Gateway (REST APIs)
-
-AWS Lambda (Python 3.12)
-
-Database
-
-Amazon DynamoDB
-
-Events
-
-Registrations
-
-MatchingProfiles (with GSI on eventId)
-
-Monitoring
-
-Amazon CloudWatch
-
-🧠 AI Modules Explained
-🧬 DNA Matching System
-
+### 🧬 DNA Matching System
 Calculates compatibility using:
+- Shared interests (up to 30 points)
+- Mentorship alignment (up to 25 points)
+- Goal similarity (up to 25 points)
+- Collaboration intent (up to 15 points)
+- Same-organization penalty (-10 points)
 
-Shared interests (30%)
+Also generates **personalized ice-breaker messages** to help attendees start meaningful conversations.
 
-Mentorship alignment (25%)
+---
 
-Goal similarity (25%)
+### 🤖 AI Event Recommendation Engine
+A **4-factor hybrid recommendation model**:
+- 40% Collaborative Filtering
+- 30% Category Matching
+- 20% Popularity
+- 10% Urgency (event filling rate)
 
-Collaboration intent (15%)
+Returns the **top 3 personalized event recommendations**.
 
-Same-organization penalty (−10%)
+---
 
-Also generates personalized ice-breaker messages to help users start conversations naturally.
+### 💬 AI Chatbot
+- Keyword-based intent detection
+- Fuzzy matching for event names
+- Context-aware responses based on event type (hackathon, workshop, etc.)
 
-🤖 AI Event Recommendation Engine
+---
 
-A 4-factor hybrid model:
+## 🔐 Security Design
 
-40% Collaborative filtering
+- IAM roles with **least-privilege access**
+- HTTPS via CloudFront (SSL/TLS)
+- S3 secured using **Origin Access Identity (OAI)**
+- Amazon Cognito planned for authentication
+- Proper CORS handling at API Gateway and Lambda
 
-30% Category similarity
+---
 
-20% Popularity
+## 📊 Performance & Cost Efficiency
 
-10% Urgency (event filling fast)
+### Performance
+- API response time < **500 ms**
+- DynamoDB single-digit millisecond latency
+- Global low-latency delivery using CloudFront
 
-Returns top 3 personalized event suggestions.
+### Cost
+- Runs largely within **AWS Free Tier**
+- Example: 1,000 registrations cost **< $0.20**
+- No cost during idle periods
 
-💬 AI Chatbot
+---
 
-Keyword-based intent detection
+## 🛠️ Technologies Used
 
-Fuzzy matching for event names
+- AWS Lambda
+- Amazon API Gateway
+- Amazon DynamoDB
+- Amazon S3
+- Amazon CloudFront
+- Amazon IAM
+- Amazon SES
+- Amazon Cognito
+- Amazon CloudWatch
+- React.js
+- Python
 
-Context-aware responses based on event type (hackathon, workshop, etc.)
+---
 
-🔐 Security Design
+## 👨‍💻 Contributors
 
-IAM Roles with least-privilege access
+**Byna Sriroop (23BCE1863)**  
+- Frontend development & deployment  
+- DNA Matching System  
+- Admin Dashboard  
+- S3 & CloudFront setup  
 
-HTTPS (SSL/TLS) via CloudFront
+**Gunnam Reddy Sujith Reddy (23BCE1613)**  
+- Backend serverless architecture  
+- API Gateway & IAM configuration  
+- AI Event Recommendation Engine  
+- AI Chatbot  
+- End-to-end registration workflow  
 
-S3 protected using Origin Access Identity (OAI)
+---
 
-Amazon Cognito planned for authentication
+## 🔮 Future Enhancements
 
-CORS handled at API Gateway + Lambda level
+- Integrate **Amazon Lex** for advanced NLP
+- Enable automated email reminders using **SES + CloudWatch Events**
+- Add full **Admin CRUD operations**
+- Implement **CI/CD pipeline** using AWS CodePipeline or Terraform
 
-📊 Performance & Cost
-⚡ Performance
+---
 
-API response time < 500 ms
-
-DynamoDB single-digit millisecond latency
-
-Global low-latency delivery via CloudFront
-
-💰 Cost Efficiency
-
-Runs mostly within AWS Free Tier
-
-Example: 1,000 registrations ≈ <$0.20
-
-Zero cost during idle periods
-
-🛠️ Technologies Used
-
-AWS Lambda
-
-Amazon API Gateway
-
-Amazon DynamoDB
-
-Amazon S3
-
-Amazon CloudFront
-
-Amazon SES
-
-Amazon IAM
-
-Amazon CloudWatch
-
-React.js
-
-Python
-
-👨‍💻 Contributors
-
-Byna Sriroop (23BCE1863)
-
-Frontend Development
-
-DNA Matching System
-
-Admin Dashboard
-
-Deployment (S3 + CloudFront)
-
-Gunnam Reddy Sujith Reddy (23BCE1613)
-
-Backend Architecture
-
-API Gateway & IAM
-
-AI Event Recommendation Engine
-
-AI Chatbot
-
-End-to-End Registration Workflow
-
-🔮 Future Enhancements
-
-Integrate Amazon Lex for advanced NLP
-
-Enable automated email reminders using SES + CloudWatch Events
-
-Add full Admin CRUD operations
-
-Implement CI/CD pipeline (AWS CodePipeline / Terraform)
-
-📚 References
+## 📚 References
 
 AWS Official Documentation:
-
-AWS Lambda
-
-DynamoDB
-
-API Gateway
-
-CloudFront
-
-S3
-
-Cognito
-
-SES
+- AWS Lambda
+- Amazon DynamoDB
+- Amazon S3
+- Amazon CloudFront
+- Amazon API Gateway
+- Amazon Cognito
+- Amazon SES
